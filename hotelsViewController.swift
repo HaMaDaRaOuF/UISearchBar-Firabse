@@ -113,10 +113,11 @@ class hotelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-        if isSearching{
-            filterHotels.count
-        }
+       if isSearching{
+            return filterHotels.count
+        } else {
         return hotelList.count
+        }
     }
     
     
